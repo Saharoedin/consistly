@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "495497021136",
+    "project_id": "consistly-89b45",
+    "storage_bucket": "consistly-89b45.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:495497021136:android:5ca44a41396059acc740d5",
+        "android_client_info": {
+          "package_name": "id.productivityapp.consistly"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "495497021136-o95jpgljmkkvv3m2n0mnca1s1ubha0tc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmUnVweCzb6U85Nuu2rbYvuJSDmAWibPA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "495497021136-o95jpgljmkkvv3m2n0mnca1s1ubha0tc.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "495497021136-th674ku099gjhk20htcm7di02ca3ia73.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "id.productivityapp.consistly"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

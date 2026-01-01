@@ -1,0 +1,8 @@
+{
+  "goalId": "g1",
+  "userId": "abc",
+  "title": "Improve focus at work",
+  "category": "work",
+  "active": true,
+  "createdAt": "timestamp"
+}
