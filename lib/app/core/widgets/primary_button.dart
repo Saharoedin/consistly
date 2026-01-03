@@ -5,21 +5,27 @@ import 'package:get/get_connect/http/src/utils/utils.dart';
 class PrimaryButton extends StatelessWidget {
   final String text;
   final VoidCallback onTap;
+  final Color? backgroundColor;
+  final Color? borderColor;
+  final Color? fontColor;
 
   const PrimaryButton({
     required this.text,
     required this.onTap,
+    this.backgroundColor,
+    this.borderColor,
+    this.fontColor,
   });
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-        backgroundColor: Theme.of(context).colorScheme.primary,
+        backgroundColor: backgroundColor ?? AppColors.primary,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(16),
           side: BorderSide(
-            color: Theme.of(context).colorScheme.primary,
+            color: borderColor ?? Colors.transparent,
           ),
         ),
         minimumSize: Size(double.infinity, 56),
@@ -28,10 +34,12 @@ class PrimaryButton extends StatelessWidget {
       child: Text(
         text,
         style: TextStyle(
-          color: Theme.of(context).colorScheme.onPrimary,
+          color: fontColor ?? Colors.white,
           fontSize: 16,
           fontWeight: FontWeight.w600,
         ),
+        maxLines: 1,
+        overflow: TextOverflow.ellipsis,
       ),
     );
   }

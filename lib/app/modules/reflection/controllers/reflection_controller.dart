@@ -1,9 +1,10 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class ReflectionController extends GetxController {
-  //TODO: Implement ReflectionController
+  var selectedMode = ''.obs;
+  var selectedFeeling = ''.obs;
 
-  final count = 0.obs;
   @override
   void onInit() {
     super.onInit();
@@ -19,5 +20,19 @@ class ReflectionController extends GetxController {
     super.onClose();
   }
 
-  void increment() => count.value++;
+  void setMode(String mood) {
+    if (selectedMode.value == mood) {
+      selectedMode.value = '';
+    } else {
+      selectedMode.value = mood;
+    }
+  }
+
+  void setFeeling(String feeling) {
+    if (selectedFeeling.value == feeling) {
+      selectedFeeling.value = '';
+    } else {
+      selectedFeeling.value = feeling;
+    }
+  }
 }

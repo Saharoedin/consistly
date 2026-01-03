@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class OnboardingController extends GetxController {
@@ -6,6 +7,7 @@ class OnboardingController extends GetxController {
   final energies = ["High", "Balanced"];
   var energySelectedIndex = 0.obs;
   var currentPage = 0.obs;
+  final PageController pageController = PageController();
 
   @override
   void onInit() {
