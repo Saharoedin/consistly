@@ -1,5 +1,8 @@
+import 'package:consistly/app/core/services/auth_service.dart';
+import 'package:consistly/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:sp_util/sp_util.dart';
 
 class OnboardingController extends GetxController {
   final goals = ["Work", "Study", "Health", "Life"];
@@ -22,5 +25,19 @@ class OnboardingController extends GetxController {
   @override
   void onClose() {
     super.onClose();
+  }
+
+  Future<void> finishOnboarding() async {
+    await AuthService().saveOnboardingData(
+      energyLevel: energies
+          .where((element) => false)
+          .toList()[energySelectedIndex.value],
+      improvements: improvements,
+      goals: goals,
+    );
+
+    // pindah ke Home
+    SpUtil.putBool('isOnboarded', true);
+    Get.offAllNamed(Routes.HOME);
   }
 }

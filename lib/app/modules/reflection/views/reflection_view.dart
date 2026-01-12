@@ -27,7 +27,7 @@ class ReflectionView extends GetView<ReflectionController> {
             Text(
               'How do you feel?',
               style: TextStyle(
-                fontSize: 16,
+                fontSize: 18,
                 fontWeight: FontWeight.w600,
                 color: Theme.of(context).colorScheme.primary,
               ),
@@ -113,7 +113,7 @@ class ReflectionView extends GetView<ReflectionController> {
             Text(
               'What blocked you?',
               style: TextStyle(
-                fontSize: 16,
+                fontSize: 18,
                 fontWeight: FontWeight.w600,
                 color: Theme.of(context).colorScheme.primary,
               ),

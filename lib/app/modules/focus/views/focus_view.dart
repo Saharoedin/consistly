@@ -26,14 +26,20 @@ class FocusView extends GetView<FocusController> {
           children: [
             Expanded(
               child: Center(
-                child: Text(
-                  '23: 25:00',
-                  style: TextStyle(
-                    fontSize: 70,
-                    fontWeight: FontWeight.w600,
-                    color: Theme.of(context).colorScheme.primary,
-                  ),
-                ),
+                child: Obx(() {
+                  final seconds = controller.remainingSeconds.value;
+                  final minutes = (seconds ~/ 60).toString().padLeft(2, '0');
+                  final secs = (seconds % 60).toString().padLeft(2, '0');
+
+                  return Text(
+                    '$minutes:$secs',
+                    style: TextStyle(
+                      fontSize: 90,
+                      fontWeight: FontWeight.w600,
+                      color: Theme.of(context).colorScheme.primary,
+                    ),
+                  );
+                }),
               ),
             ),
             Row(

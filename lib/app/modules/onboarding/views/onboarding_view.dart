@@ -278,7 +278,7 @@ class OnboardingView extends GetView<OnboardingController> {
                 PrimaryButton(
                   text: 'Continue',
                   onTap: () {
-                    Get.offAndToNamed(Routes.HOME);
+                    controller.finishOnboarding();
                   },
                 )
               ],
