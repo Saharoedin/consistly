@@ -11,6 +11,7 @@ class OnboardingController extends GetxController {
   var energySelectedIndex = 0.obs;
   var currentPage = 0.obs;
   final PageController pageController = PageController();
+  var improvements = "".obs;
 
   @override
   void onInit() {
@@ -29,11 +30,9 @@ class OnboardingController extends GetxController {
 
   Future<void> finishOnboarding() async {
     await AuthService().saveOnboardingData(
-      energyLevel: energies
-          .where((element) => false)
-          .toList()[energySelectedIndex.value],
-      improvements: improvements,
-      goals: goals,
+      energyLevel: energies[energySelectedIndex.value],
+      improvements: goals[goalSelectedIndex.value],
+      goals: 'Focus better at ${goals[goalSelectedIndex.value]}',
     );
 
     // pindah ke Home
